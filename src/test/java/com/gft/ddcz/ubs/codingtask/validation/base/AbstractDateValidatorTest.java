@@ -18,7 +18,6 @@ class AbstractDateValidatorTest {
 
     static final String ERROR = "error";
     static final LocalDate TODAY = LocalDate.now();
-    static final LocalDate YESTERDAY = TODAY.minusDays(1L);
     static final LocalDate TOMORROW = TODAY.plusDays(1L);
 
     static class ClassUnderTest extends AbstractDateValidator<FxTransaction> {
