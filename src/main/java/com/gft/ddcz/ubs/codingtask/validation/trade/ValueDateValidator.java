@@ -1,6 +1,5 @@
 package com.gft.ddcz.ubs.codingtask.validation.trade;
 
-import com.gft.ddcz.ubs.codingtask.model.FxTransaction;
 import com.gft.ddcz.ubs.codingtask.model.Trade;
 import com.gft.ddcz.ubs.codingtask.validation.base.AbstractDateValidator;
 import org.springframework.stereotype.Component;

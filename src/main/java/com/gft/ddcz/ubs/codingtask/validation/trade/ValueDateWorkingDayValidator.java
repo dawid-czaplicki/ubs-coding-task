@@ -1,6 +1,5 @@
 package com.gft.ddcz.ubs.codingtask.validation.trade;
 
-import com.gft.ddcz.ubs.codingtask.model.FxTransaction;
 import com.gft.ddcz.ubs.codingtask.model.Trade;
 import com.gft.ddcz.ubs.codingtask.validation.ValidationResult;
 import com.gft.ddcz.ubs.codingtask.validation.ValidationRule;
@@ -19,7 +18,7 @@ public class ValueDateWorkingDayValidator implements ValidationRule<Trade> {
 
     @Override
     public void validate(Trade target, ValidationResult errors) {
-        if(target.getValueDate() == null) {
+        if (target.getValueDate() == null) {
             return;
         }
 

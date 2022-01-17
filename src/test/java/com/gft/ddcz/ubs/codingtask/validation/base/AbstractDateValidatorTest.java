@@ -57,7 +57,7 @@ class AbstractDateValidatorTest {
         assertThat(validationResult.getErrors()).containsExactly(ERROR);
     }
 
-    static Stream<Arguments> provideForComparisonFails(){
+    static Stream<Arguments> provideForComparisonFails() {
         return Stream.of(
                 Arguments.of(TODAY, AFTER, TOMORROW),
                 Arguments.of(TOMORROW, BEFORE, TODAY),
@@ -77,7 +77,7 @@ class AbstractDateValidatorTest {
         assertThat(validationResult.getErrors()).isEmpty();
     }
 
-    static Stream<Arguments> provideForComparisonSucceeds(){
+    static Stream<Arguments> provideForComparisonSucceeds() {
         return Stream.of(
                 Arguments.of(TODAY, BEFORE, TOMORROW),
                 Arguments.of(TOMORROW, AFTER, TODAY),

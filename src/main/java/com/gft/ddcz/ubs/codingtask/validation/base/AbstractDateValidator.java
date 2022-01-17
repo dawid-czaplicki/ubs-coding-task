@@ -12,6 +12,7 @@ import java.util.function.BiPredicate;
  * Base class for validators focused on relation between two dates. Compares {@link #getFirstDate(FxTransaction)}
  * with {@link #getSecondDate(FxTransaction)} using {@link #getComparison()}. If the comparison fails, adds the
  * specified error code to the result list.
+ *
  * @param <T> type of transaction that can be validated using this validator
  */
 public abstract class AbstractDateValidator<T extends FxTransaction> implements ValidationRule<T> {
@@ -22,7 +23,7 @@ public abstract class AbstractDateValidator<T extends FxTransaction> implements 
         AFTER(LocalDate::isAfter),
         NOT_BEFORE((d1, d2) -> !d1.isBefore(d2)),
         NOT_AFTER((d1, d2) -> !d1.isAfter(d2)),
-        EXACTLY((d1,d2) -> d1.equals(d2));
+        EXACTLY((d1, d2) -> d1.equals(d2));
 
         final BiPredicate<LocalDate, LocalDate> biPredicate;
 
@@ -31,6 +32,7 @@ public abstract class AbstractDateValidator<T extends FxTransaction> implements 
         }
 
     }
+
     private final String errorCode;
 
     protected AbstractDateValidator(String errorCode) {

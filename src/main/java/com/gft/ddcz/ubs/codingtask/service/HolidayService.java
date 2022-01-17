@@ -23,7 +23,7 @@ public class HolidayService {
     /**
      * Checks if a given date is a holiday for the given currency.
      *
-     * @param currency currency to be checked
+     * @param currency  currency to be checked
      * @param valueDate value date to be validated
      * @return {@code true} if the given date is a holiday for the currency, {@code false} otherwise
      */
